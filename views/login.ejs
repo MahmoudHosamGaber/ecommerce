@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-image: url("login-background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+      }
+
+      .form-container {
+        box-shadow: -1px 4px 25px 11px rgba(20, 255, 236, 1);
+        padding: 2em 2.5em;
+        backdrop-filter: blur(7px);
+        position: relative;
+      }
+      #alert {
+        position: absolute;
+        display: none;
+        top: 0;
+        transform: translateY(-100%);
+        width: 100%;
+        text-align: center;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Welcome</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body class="d-flex justify-content-center align-items-center fluid">
+    <div
+      class="fluid d-flex flex-column justify-content-between align-items-center form-container"
+    >
+      <div id="alert" class="alert alert-warning" role="alert">Error</div>
+      <h1 class="text-light">Login</h1>
+      <form
+        method="POST"
+        class="d-flex flex-column justify-content-between align-items-center"
+      >
+        <div class="form-group">
+          <label class="text-light">Username:</label>
+          <input
+            type="text"
+            name="username"
+            class="form-control"
+            placeholder="Username"
+          />
+        </div>
+        <div class="form-group">
+          <label class="text-light">Password:</label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            placeholder="Password"
+          />
+        </div>
+        <input type="submit" value="Login" class="btn btn-success btn-block" />
+      </form>
+      <br />
+      <a href="registration" class="btn btn-primary btn-block"
+        >I don't have an account</a
+      >
+    </div>
+    <div class="main"><%= flag%></div>
+
+    <script>
+      var flag = document.querySelector(".main");
+      var alert = document.querySelector("#alert");
+      var temp = "";
+      if (flag.firstChild) temp = flag.firstChild.textContent;
+      if (temp == "login") {
+        alert.style.display = "block";
+        alert.innerHTML = "You Have To Login First";
+      }
+      if (temp == "invalid") {
+        alert.style.display = "block";
+        alert.innerHTML = "Invalid Username";
+      }
+      if (temp == "taken") {
+        alert.style.display = "block";
+        alert.innerHTML = "This Username Is already Taken";
+      }
+      if (temp == "wrong") {
+        alert.style.display = "block";
+        alert.innerHTML = "Wrong Username or Password";
+      }
+
+      flag.removeChild(flag.firstChild);
+    </script>
+  </body>
+</html>

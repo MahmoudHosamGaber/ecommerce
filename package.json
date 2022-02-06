@@ -1,0 +1,23 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "alert": "^5.0.10",
+    "confirm": "^0.1.1",
+    "cookie-parser": "~1.4.4",
+    "crypto": "^1.0.1",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-session": "^1.17.2",
+    "fs": "^0.0.1-security",
+    "http-errors": "~1.6.3",
+    "mongodb": "^4.2.2",
+    "morgan": "~1.9.1",
+    "popups": "^1.1.3"
+  }
+}

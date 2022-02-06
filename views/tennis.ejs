@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .container {
+        position: relative !important;
+      }
+      #alert {
+        position: absolute;
+        display: none;
+        top: 0;
+        width: 50%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        text-align: center;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/products.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tennis Racket</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="alert" class="alert alert-danger" role="alert">Error</div>
+      <div
+        class="d-flex flex-column justify-content-around align-items-center flex-lg-row justify-content-around align-items-center main-div"
+      >
+        <div class="container-fluid image-div">
+          <img
+            id="image"
+            class="img-fluid"
+            src="/tennis.jpg"
+            width="193"
+            height="300"
+          />
+        </div>
+        <div class="px-5 text-center">
+          <h1 class="text-center">Tennis Rackets</h1>
+          <p class="lead mb-5">
+            2021 New Professional-grade Wilson 1Pc Hend Carbon Fiber Tennis
+            Racket. Tennis Racket Wholesale Customized High Quality Carbon
+            Aluminum One-piece Training Tennis Racket
+          </p>
+          <a href="/AddToCartTennis" class="text-center">Add To Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main"><%= flag%></div>
+
+    <script>
+      var flag = document.querySelector(".main");
+      var alert = document.querySelector("#alert");
+      var temp = "";
+      if (flag.firstChild) temp = flag.firstChild.textContent;
+      if (temp == "fail") {
+        alert.classList.add("alert-danger");
+        alert.classList.remove("alert-success");
+        alert.style.display = "block";
+        alert.innerHTML = "product already added";
+      }
+      if (temp == "success") {
+        alert.classList.remove("alert-danger");
+        alert.classList.add("alert-success");
+        alert.style.display = "block";
+        alert.innerHTML = "Product was added to cart successfully!";
+      }
+      flag.removeChild(flag.firstChild);
+
+      let marker = document.querySelector("#marker");
+      let list = document.querySelectorAll("ul li");
+      function moveIndicator(e) {
+        marker.style.left = e.offsetLeft + "px";
+        marker.style.width = e.offsetWidth + "px";
+      }
+      marker.style.left = 0 + "px";
+      marker.style.width = 141 + "px";
+      list.forEach((link) => {
+        link.addEventListener("mouseover", (event) => {
+          moveIndicator(event.target);
+        });
+      });
+
+      function activeLink() {
+        list.forEach((item) => {
+          item.classList.remove("active");
+          this.classList.add("active");
+        });
+      }
+
+      list.forEach((item) => {
+        // item.addEventListener('mouseover', activeLink)
+        item.addEventListener("mouseover", activeLink);
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
