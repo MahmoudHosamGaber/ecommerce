@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <style>
+      body{
+        min-width: 600px;
+      }
         .cart-item{
 
           width: 90%;
@@ -26,7 +29,8 @@
         .item-price h1{
           margin-right: 3rem;
         }
-        span{
+        span.count,
+        span.price{
           background: #fff;
           border-radius: 5px;
           padding: .5rem 1rem;
@@ -137,8 +141,8 @@
               <div class="cart-item">
                 <img id="image" src="/${input[i]}.jpg">
                 <div class="item-price">
-                  <h1>Price: <span>$59.99</span></h1>
-                  <h2>Count: <span>1</span> </h2>
+                  <h1>Price: <span class="price">$59.99</span></h1>
+                  <h2>Count: <span class="count">1</span> </h2>
                 </div>
               </div>`
         
