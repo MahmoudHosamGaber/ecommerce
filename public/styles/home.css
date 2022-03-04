@@ -1,0 +1,71 @@
+/* product Cards */
+
+.card {
+  border: none;
+  outline: none;
+  background-color: #131419 !important;
+  border-radius: 20px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.8);
+  /* max-height: 600px; */
+}
+
+.text1 {
+  font-size: 13px;
+  color: #cbcb;
+}
+
+.info {
+  line-height: 17px;
+}
+
+.star {
+  color: #fbc02d;
+}
+
+.cost span {
+  color: #fb3531;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.shoe {
+  background: #dc3545;
+}
+.shoe a:hover {
+  color: #000;
+}
+
+.cursor {
+  color: #f00;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;
+  background: #131419;
+  height: 30px;
+  box-shadow: -2px -2px 10px rgba(255, 255, 255, 0.1),
+    2px 2px 15px rgba(0, 0, 0, 0.8);
+  margin: 10px 0;
+  width: 50%;
+}
+.cursor:hover {
+  color: #0f0;
+  box-shadow: inset -2px -2px 10px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 15px rgba(0, 0, 0, 0.8);
+}
+.shoe a {
+  text-decoration: none;
+  color: #fff;
+}
+img {
+  /* width: 75%;
+  height: 75%; */
+  max-height: 300px;
+}
+.fa-bars {
+  color: rgba(255, 255, 255, 01);
+}
