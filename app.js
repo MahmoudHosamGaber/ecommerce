@@ -80,7 +80,7 @@ app.get("/cart", async function (req, res) {
         cartarray.push(element.product);
       }
     });
-    res.render("cart", { CART: cartarray, flag: "false" });
+    res.render("cart", { CART: cartarray, flag: "false"});
   }
 });
 
