@@ -67,7 +67,7 @@ app.get("/cart", async function (req, res) {
   } else {
     var { MongoClient } = require("mongodb");
     var uri =
-      "mongodb+srv://Admin:Admin@cluster0.eohrb.mongodb.net/MyDB?retryWrites=true&w=majority";
+      "uri";
     var client = new MongoClient(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -147,7 +147,7 @@ app.get("/tennis", function (req, res) {
 app.get("/AddToCartSun", async function (req, res) {
   var { MongoClient } = require("mongodb");
   var uri =
-    "mongodb+srv://Admin:Admin@cluster0.eohrb.mongodb.net/MyDB?retryWrites=true&w=majority";
+    process.env.URI;
   var client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -176,7 +176,7 @@ app.get("/AddToCartSun", async function (req, res) {
 app.get("/AddToCartBoxing", async function (req, res) {
   var { MongoClient } = require("mongodb");
   var uri =
-    "mongodb+srv://Admin:Admin@cluster0.eohrb.mongodb.net/MyDB?retryWrites=true&w=majority";
+    process.env.URI;
   var client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -207,7 +207,7 @@ app.get("/AddToCartBoxing", async function (req, res) {
 app.get("/AddToCartIphone", async function (req, res) {
   var { MongoClient } = require("mongodb");
   var uri =
-    "mongodb+srv://Admin:Admin@cluster0.eohrb.mongodb.net/MyDB?retryWrites=true&w=majority";
+    process.env.URI;
   var client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -238,7 +238,7 @@ app.get("/AddToCartIphone", async function (req, res) {
 app.get("/AddToCartLeaves", async function (req, res) {
   var { MongoClient } = require("mongodb");
   var uri =
-    "mongodb+srv://Admin:Admin@cluster0.eohrb.mongodb.net/MyDB?retryWrites=true&w=majority";
+    process.env.URI;
   var client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -269,7 +269,7 @@ app.get("/AddToCartLeaves", async function (req, res) {
 app.get("/AddToCartTennis", async function (req, res) {
   var { MongoClient } = require("mongodb");
   var uri =
-    "mongodb+srv://Admin:Admin@cluster0.eohrb.mongodb.net/MyDB?retryWrites=true&w=majority";
+    process.env.URI;
   var client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -300,7 +300,7 @@ app.get("/AddToCartTennis", async function (req, res) {
 app.get("/AddToCartGalaxy", async function (req, res) {
   var { MongoClient } = require("mongodb");
   var uri =
-    "mongodb+srv://Admin:Admin@cluster0.eohrb.mongodb.net/MyDB?retryWrites=true&w=majority";
+    process.env.URI;
   var client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -331,7 +331,7 @@ app.get("/AddToCartGalaxy", async function (req, res) {
 app.post("/register", async function (req, res) {
   var { MongoClient } = require("mongodb");
   var uri =
-    "mongodb+srv://Admin:Admin@cluster0.eohrb.mongodb.net/MyDB?retryWrites=true&w=majority";
+    process.env.URI;
   var client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -366,7 +366,7 @@ app.post("/register", async function (req, res) {
 app.post("/", async function (req, res) {
   var { MongoClient } = require("mongodb");
   var uri =
-    "mongodb+srv://Admin:Admin@cluster0.eohrb.mongodb.net/MyDB?retryWrites=true&w=majority";
+    process.env.URI;
   var client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -394,7 +394,7 @@ app.post("/", async function (req, res) {
 app.post("/login", async function (req, res) {
   var { MongoClient } = require("mongodb");
   var uri =
-    "mongodb+srv://Admin:Admin@cluster0.eohrb.mongodb.net/MyDB?retryWrites=true&w=majority";
+    process.env.URI;
   var client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -422,7 +422,7 @@ app.post("/login", async function (req, res) {
 app.post("/search", async (req, res) => {
   var { MongoClient } = require("mongodb");
   var uri =
-    "mongodb+srv://Admin:Admin@cluster0.eohrb.mongodb.net/MyDB?retryWrites=true&w=majority";
+    process.env.URI;
   var client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
